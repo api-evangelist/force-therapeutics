@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.forcetherapeutics.com/blog/how-force-therapeutics-protects-your-practice-and-patient-data
+notes: >-
+  Force Therapeutics is a digital patient-engagement / remote-monitoring platform
+  handling protected health information (PHI). It has no public developer API or
+  OpenAPI; integrations run through the Redox network and EHRs (Epic, Cerner,
+  MEDITECH, NextGen) over FHIR/HL7. Compliance posture below is asserted from the
+  provider's published security statement and its independent SOC 2 Type II & HIPAA
+  audit. Standards are recorded as published claims, not derived from a spec.
+standards:
+  - id: soc2-type-ii
+    conforms: true
+    evidence: >-
+      Independent SOC 2 Type II examination (July 2022) by Linford & Company LLP
+      returned an unqualified opinion with no exceptions; provider states it is
+      "100% SOC 2 and HIPAA compliant" and undergoes regular independent audits.
+  - id: hipaa
+    conforms: true
+    evidence: >-
+      HIPAA security-rule controls audited alongside the SOC 2 Type II engagement;
+      PHI encrypted in transit and at rest; data handling/storage/transmission
+      stated to meet or exceed HIPAA requirements.
+  - id: fhir
+    conforms: partial
+    evidence: >-
+      Provider states it is actively engaging in FHIR and API-based interoperability
+      workflows; EHR integration is brokered through the Redox Connection Network
+      rather than a self-published FHIR API. No public FHIR conformance statement.
+  - id: aws-hosted
+    conforms: true
+    evidence: >-
+      Infrastructure hosted on Amazon Web Services; provider inherits AWS physical
+      and environmental safeguards.
